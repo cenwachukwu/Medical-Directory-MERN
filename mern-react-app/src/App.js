@@ -5,7 +5,9 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import About from "./About";
 import Doctors from "./Doctors";
-
+import Profile from "./Searchbyprofile";
+import Insurance from "./Searchbyinsurance";
+import Speciality from "./Searchbyspeciality"
 
 class App extends Component {
   render() {
@@ -17,6 +19,9 @@ class App extends Component {
           <Route path="/" exact component ={Home}/>
           <Route path="/About" component ={About}/>
           <Route path="/Doctors" component ={Doctors}/>
+          <Route path="/Doctors/searchbyprofile" component ={Profile}/>
+          <Route path="/Doctors/searchbyinsurance" component ={Insurance}/>
+          <Route path="/Doctors/searchbyspeciality" component ={Speciality}/>
         </Router>
       </div>
     );
