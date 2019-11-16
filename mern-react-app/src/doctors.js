@@ -6,22 +6,29 @@ class Doctors extends Component {
         return (
             <div>
                 <h1>Meet your medical practioners</h1>
-                <h2>Find your Doctors</h2>
-                <Link to="/Doctors/searchbyprofile">
-                    <button>
-                        Search by names
-                    </button>
-                </Link>
-                <Link to="/Doctors/searchbyinsurance">
-                    <button>
-                        Search by insurance
-                    </button>
-                </Link>
-                <Link to="/Doctors/searchbyspeciality">
-                    <button>
-                        Search by speciality
-                    </button>
-                </Link>
+                
+                <div>
+                    <Link to="/Doctors/searchbyprofile">
+                        <button>
+                            Search by names
+                        </button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/Doctors/searchbyinsurance">
+                        <button>
+                            Search by insurance
+                        </button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/Doctors/searchbyspeciality">
+                        <button>
+                            Search by speciality
+                        </button>
+                    </Link>
+                </div>
+
             </div>
         )
     }
