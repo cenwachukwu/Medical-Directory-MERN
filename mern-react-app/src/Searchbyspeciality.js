@@ -15,7 +15,7 @@ class Speciality extends Component{
     }
 
     fetchResultsFromApi = (query) => {
-        const Url = `http://localhost:8080/directory/profile/${query}`;
+        const Url = `http://localhost:8080/directory/specialties/${query}`;
 
         if (this.cancel) {
             this.cancel.cancel(); //before making a request we first check if the token was already availble then we cancel that previous request before createing a new one  
@@ -24,13 +24,13 @@ class Speciality extends Component{
 
         Axios.get(Url, { cancelToken: this.cancel.token })
             .then(res => {
-                console.log(res.data[0])
-                console.log(res.data[0].educations[0].school)
+                // console.log(res.data[0])
+                // console.log(res.data[0].educations[0].school)
                 const resultNotFoundMsg = !res.data.length //So we got the response but data[0] is empty 
                     ? "There are no more search results"
                     : '';
                 this.setState({
-                    result: res.data, //now we set state of results to res.data[0]
+                    result: res.data, //now we set state of results to res.data
                     message: resultNotFoundMsg,
                     loading: false
                 })
@@ -64,20 +64,19 @@ class Speciality extends Component{
                     <h1>find doctors profile</h1>
                 </div>
                 <div>
-                    <input type="text" value={query} placeholder="find doctors by firstname "
-                        onChange={this.onProfileNameChange} />
-                    <input type="submit" value="Submit" />
+                    <input type="text" value={query} placeholder="find doctors by firstname " onChange={this.onProfileNameChange} />
                 </div>           
-                {/* {this.renderResults()} */}
+                
                 <div>
                     {this.state.result.map((object, index) => {
                         console.log(object)
-                        console.log(object.educations[0].school)    
+                        // console.log(object.educations[0].school)  
+
                         return (
                             <div key={object._id + 0}>
-                                {/* <p key={object._id + 1}>{object.educations[0].school} {object.educations[0].schoole}</p> */}
-                                <p key={object._id + 2}>{object.educations[0].school}</p>
-                                {/* <img src={object.profile[0].image_url} alt="" key={object._id + 3}/> */}
+                                <img src={object.profile[0].image_url} alt="" key={object._id + 1}/>
+                                <p key={object._id + 2}>{object.profile[0].first_name} {object.profile[0].last_name}</p>
+                                <p key={object._id + 4}>{object.profile[0].bio}</p>
                             </div>
                         )
 

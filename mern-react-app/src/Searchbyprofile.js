@@ -75,9 +75,9 @@ class Profile extends Component {
                         console.log(object.educations[0].school)    
                         return (
                             <div key={object._id + 0}>
-                                {/* <p key={object._id + 1}>{object.educations[0].school} {object.educations[0].schoole}</p> */}
-                                <p key={object._id + 2}>{object.educations[0].school}</p>
-                                {/* <img src={object.profile[0].image_url} alt="" key={object._id + 3}/> */}
+                                <img src={object.profile[0].image_url} alt="" key={object._id + 1}/>
+                                <p key={object._id + 2}>{object.profile[0].first_name} {object.profile[0].last_name}</p>
+                                <p key={object._id + 4}>{object.profile[0].bio}</p>
                             </div>
                         )
 
