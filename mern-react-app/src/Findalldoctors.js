@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios'
+// import Doctors from 'Doctors'
 
 class Findalldoctors extends Component {
     constructor(props) {
