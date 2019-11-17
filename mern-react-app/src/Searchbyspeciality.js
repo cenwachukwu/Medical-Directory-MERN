@@ -61,7 +61,7 @@ class Speciality extends Component{
         return (
             <div>
                 <div>
-                    <h1>find doctors profile</h1>
+                    <h1>find your doctor by speciality</h1>
                 </div>
                 <div>
                     <input type="text" value={query} placeholder="find doctors by firstname " onChange={this.onProfileNameChange} />

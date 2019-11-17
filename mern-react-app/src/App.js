@@ -9,7 +9,10 @@ import DoctorEdit from "./DoctorEdit";
 import Findalldoctors from "./Findalldoctors"
 import Profile from "./Searchbyprofile";
 import Insurance from "./Searchbyinsurance";
-import Speciality from "./Searchbyspeciality"
+import Speciality from "./Searchbyspeciality";
+import CreateProfile from "./Createprofile";
+import DeleteProfile from "./Deleteprofile";
+import EditProfile from "./Editprofile"
 
 class App extends Component {
   render() {
@@ -26,6 +29,9 @@ class App extends Component {
           <Route path="/Doctors/searchbyprofile" component ={Profile}/>
           <Route path="/Doctors/searchbyinsurance" component ={Insurance}/>
           <Route path="/Doctors/searchbyspeciality" component ={Speciality}/>
+          <Route path="/DoctorEdit/createprofile" component ={CreateProfile}/>
+          <Route path="/DoctorEdit/editprofile" component ={DeleteProfile}/>
+          <Route path="/DoctorEdit/deleteprofile" component ={EditProfile}/>
         </Router>
       </div>
     );

@@ -64,9 +64,7 @@ class Profile extends Component {
                     <h1>find doctors profile</h1>
                 </div>
                 <div>
-                    <input type="text" value={query} placeholder="find doctors by firstname "
-                        onChange={this.onProfileNameChange} />
-                    <input type="submit" value="Submit" />
+                    <input type="text" value={query} placeholder="find doctors by firstname "onChange={this.onProfileNameChange} />
                 </div>           
                 {/* {this.renderResults()} */}
                 <div>
@@ -76,8 +74,12 @@ class Profile extends Component {
                         return (
                             <div key={object._id + 0}>
                                 <img src={object.profile[0].image_url} alt="" key={object._id + 1}/>
-                                <p key={object._id + 2}>{object.profile[0].first_name} {object.profile[0].last_name}</p>
-                                <p key={object._id + 4}>{object.profile[0].bio}</p>
+                                <p key={object._id + 2}>{object.profile[0].first_name} {object.profile[0].middle_name} {object.profile[0].last_name} {object.profile[0].title}</p>
+                                <p key={object._id + 3}>{object.educations[0].degree} degree from  {object.educations[0].school}</p>
+                                <p key={object._id + 4}>{object.profile[0].gender}</p>
+                                <p key={object._id + 5}>{object.profile[0].bio}</p>
+                                <p key={object._id + 6}>State licenses: {object.licenses[0].state}</p>
+                                <p key={object._id + 7}>{object.specialties[0].description}</p>
                             </div>
                         )
 

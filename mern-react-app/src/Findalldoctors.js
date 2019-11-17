@@ -35,9 +35,9 @@ class Findalldoctors extends Component {
                         console.log(object.insurances[0])    
                         return (
                             <div key={object._id + 0}>
-                                <p key={object._id + 1}>{object.profile[0].first_name} {object.profile[0].last_name}</p>
-                                <p key={object._id + 2}>{object.profile[0].bio}</p>
                                 <img src={object.profile[0].image_url} alt="" key={object._id + 3}/>
+                                <p key={object._id + 1}>{object.profile[0].first_name} {object.profile[0].last_name}</p>
+                                <p key={object._id + 2}>{object.profile[0].bio}</p>                                
                             </div>
                         )
 

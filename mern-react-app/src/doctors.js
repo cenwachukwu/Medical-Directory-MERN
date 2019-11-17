@@ -22,20 +22,19 @@ class Doctors extends Component {
                     </Link>
                 </div>
                 <div>
-                    <Link to="/Doctors/searchbyinsurance">
-                        <button>
-                            Search by insurance
-                        </button>
-                    </Link>
-                </div>
-                <div>
                     <Link to="/Doctors/searchbyspeciality">
                         <button>
                             Search by speciality
                         </button>
                     </Link>
                 </div>
-
+                <div>
+                    <Link to="/Doctors/searchbyinsurance">
+                        <button>
+                            Search by insurance
+                        </button>
+                    </Link>
+                </div>
             </div>
         )
     }
