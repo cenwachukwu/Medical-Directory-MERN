@@ -6,7 +6,14 @@ class Doctors extends Component {
         return (
             <div>
                 <h1>Meet your medical practioners</h1>
-                
+
+                <div>
+                    <Link to="/Doctors/findall">
+                        <button>
+                            View all Doctors
+                        </button>
+                    </Link>
+                </div>
                 <div>
                     <Link to="/Doctors/searchbyprofile">
                         <button>

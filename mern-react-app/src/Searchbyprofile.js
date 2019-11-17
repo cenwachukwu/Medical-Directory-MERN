@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-class Profile extends Component{
-    constructor(props){
+class Profile extends Component {
+    constructor(props) {
         super(props);
         this.state = {
             profile: [],
@@ -14,10 +14,20 @@ class Profile extends Component{
     //     })
     // }
 
-    render(){
+    render() {
         return (
             <div>
-                <h1>find doctors profile</h1>
+                <div>
+                    <h1>find doctors profile</h1>
+                </div>
+                <form>
+                    <div>
+                        <label>
+                            Name: <input type="text" name="name" />
+                        </label>
+                        <input type="submit" value="Submit" />
+                    </div>
+                </form>
             </div>
         )
     }
