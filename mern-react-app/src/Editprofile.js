@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Axios from 'axios'
 
 class EditProfile extends Component {
+    constructor(props){
+        super(props);
+    }
     render() {
         return (
             <div>

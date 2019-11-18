@@ -30,8 +30,8 @@ class App extends Component {
           <Route path="/Doctors/searchbyinsurance" component ={Insurance}/>
           <Route path="/Doctors/searchbyspeciality" component ={Speciality}/>
           <Route path="/DoctorEdit/createprofile" component ={CreateProfile}/>
-          <Route path="/DoctorEdit/editprofile" component ={DeleteProfile}/>
-          <Route path="/DoctorEdit/deleteprofile" component ={EditProfile}/>
+          <Route path="/DoctorEdit/editprofile" component ={EditProfile}/>
+          <Route path="/DoctorEdit/deleteprofile" component ={DeleteProfile}/>
         </Router>
       </div>
     );

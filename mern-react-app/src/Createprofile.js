@@ -67,6 +67,7 @@ class CreateProfile extends Component {
 
         Axios.post('http://localhost:8080/directory', Profile)
         .then(res => console.log (res.data))
+        .catch(err => console.log(err))
 
         this.setState({
             first_name: "",

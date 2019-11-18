@@ -31,8 +31,8 @@ class Findalldoctors extends Component {
                 </div>
                 <div>
                     {this.state.Doctors.map((object, index) => {
-                        // console.log(object)
-                        console.log(object.insurances[0])    
+                        console.log(object)
+                        // console.log(object.insurances[0])    
                         return (
                             <div key={object._id + 0}>
                                 <img src={object.profile[0].image_url} alt="" key={object._id + 3}/>
