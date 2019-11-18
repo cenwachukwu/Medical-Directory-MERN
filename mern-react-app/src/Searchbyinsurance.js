@@ -15,7 +15,7 @@ class Insurance extends Component {
     }
 
     fetchResultsFromApi = (query) => {
-        const Url = `http://localhost:8080/directory/profile/${query}`;
+        const Url = `http://localhost:8080/directory/insurances/${query}`;
 
         if (this.cancel) {
             this.cancel.cancel(); //before making a request we first check if the token was already availble then we cancel that previous request before createing a new one  
@@ -64,21 +64,18 @@ class Insurance extends Component {
                     <h1>find doctors profile</h1>
                 </div>
                 <div>
-                    <input type="text" value={query} placeholder="find doctors by firstname "
-                        onChange={this.onProfileNameChange} />
-                    <input type="submit" value="Submit" />
+                    <input type="text" value={query} placeholder="find doctors by insurance uid " onChange={this.onProfileNameChange} />
+                    
                 </div>
-                {/* {this.renderResults()} */}
                 <div>
                     {this.state.result.map((object, index) => {
                         console.log(object)
-                        console.log(object.educations[0].school)
+                        // console.log(object.educations[0].school)
                         return (
                             <div key={object._id + 0}>
                                 <img src={object.profile[0].image_url} alt="" key={object._id + 3}/>
                                 <p key={object._id + 1}>{object.profile[0].first_name} {object.profile[0].last_name}</p>
                                 <p key={object._id + 2}>{object.profile[0].bio}</p>    
-                                <p key={object._id + 4}>{object.educations[0].school}</p>
                             </div>
                         )
 

@@ -8,7 +8,6 @@ class DeleteProfile extends Component {
             query: "",
             id: ""
         }
-        this.cancel = '';  //for best practices
         this.onSubmit = this.onSubmit.bind(this);
         this.onChangeId = this.onChangeId.bind(this);
     }
@@ -20,7 +19,6 @@ class DeleteProfile extends Component {
         });
     }
 
-    
     onSubmit(evt) {
         evt.preventDefault();
         if (this.state.id){
@@ -47,10 +45,10 @@ class DeleteProfile extends Component {
                             We would apreciate your feedback
                         </h3>
                         <div>
-                            <input type="text" value={this.state.id} placeholder="find doctors by firstname " onChange={this.onChangeId} />
+                            <input type="text" value={this.state.id} placeholder="Type your profile id" onChange={this.onChangeId} />
                         </div>
                         <div>
-                            <input type="submit" placeholder="Create New Profile" />
+                            <input type="submit" placeholder="Delete Profile" />
                         </div>
                     </div>
                 </form>

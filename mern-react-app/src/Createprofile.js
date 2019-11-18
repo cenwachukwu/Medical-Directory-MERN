@@ -64,7 +64,7 @@ class CreateProfile extends Component {
         }
         console.log(Profile); //eventually this is going to be where we submit the file to the database i.e do our post request
         // window.location = "/"; //this will take us back to the homepage after creating the profile
-
+ 
         Axios.post('http://localhost:8080/directory', Profile)
         .then(res => console.log (res.data))
         .catch(err => console.log(err))
