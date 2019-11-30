@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 import Navbar from "./Navbar";
@@ -24,7 +25,7 @@ class App extends Component {
           <Route path="/" exact component ={Home}/>
           <Route path="/About" component ={About}/>
           <Route path="/Doctors" component ={Doctors}/>
-          <Route path="/DoctorEdit" component ={DoctorEdit}/>
+          <Route path="/DoctorEdit" exact component ={DoctorEdit}/>
           <Route path="/Doctors/findall" component ={Findalldoctors}/>
           <Route path="/Doctors/searchbyprofile" component ={Profile}/>
           <Route path="/Doctors/searchbyinsurance" component ={Insurance}/>
@@ -35,8 +36,8 @@ class App extends Component {
         </Router>
       </div>
     );
-  }
+  };
 
-}
+};
 
 export default App;

@@ -1,3 +1,13 @@
-.App {
+* {
+  background-color: rgb(255, 225, 0);
   text-align: center;
+}
+
+ul{
+  list-style: none;
+  color: black;
+}
+
+Link{
+  color: black;
 }
