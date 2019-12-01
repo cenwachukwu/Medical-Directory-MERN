@@ -11,7 +11,7 @@ class Findalldoctors extends Component {
         // this.componentDidMount = this.componentDidMount.bind(this)
     }
     componentDidMount() {
-        Axios.get('http://localhost:8080/directory')
+        Axios.get('https://med-directory-cen.herokuapp.com/directory')
             .then(res => {
                 this.setState({ Doctors: res.data })
                 console.log(this.state.Doctors)

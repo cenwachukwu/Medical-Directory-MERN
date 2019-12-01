@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Axios from 'axios'
+import Axios from 'axios';
+import "./DoctorsEdit.css";
 
 class CreateProfile extends Component {
     constructor(props) {
@@ -31,7 +32,7 @@ class CreateProfile extends Component {
             language_name: "",
             category_types: "",
             insurance_uid: "",
-            insurance_name:""
+            insurance_name: ""
         }
         this.onChangeFirstName = this.onChangeFirstName.bind(this); //we bind it to give react a memory of what what the event listners do
         this.onChangeMiddleName = this.onChangeMiddleName.bind(this);
@@ -199,7 +200,7 @@ class CreateProfile extends Component {
         });
     }
 
-    
+
 
 
     onSubmit(evt) {
@@ -246,17 +247,18 @@ class CreateProfile extends Component {
                 }]
             }],
             insurances: [{
-                insurance_plan:[{
-                    category:[this.state.category_types]
+                insurance_plan: [{
+                    category: [this.state.category_types],
+                    uid: this.state.insurance_uid,
+                    name: this.state.insurance_name
                 }],
-                uid: this.state.insurance_uid,
-                name: this.state.insurance_name
+
             }]
 
         }
         console.log(Profile); //eventually this is going to be where we submit the file to the database i.e do our post request
 
-        Axios.post('http://localhost:8080/directory', Profile)
+        Axios.post('https://med-directory-cen.herokuapp.com/directory', Profile)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
 
@@ -287,7 +289,7 @@ class CreateProfile extends Component {
             language_name: "",
             category_types: "",
             insurance_uid: "",
-            insurance_name:""
+            insurance_name: ""
         })
     }
 

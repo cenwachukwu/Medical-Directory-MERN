@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import "./DoctorsEdit.css";
 
 class DoctorEdit extends Component {
     render() {

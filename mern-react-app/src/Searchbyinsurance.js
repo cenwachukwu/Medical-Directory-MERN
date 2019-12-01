@@ -15,7 +15,7 @@ class Insurance extends Component {
     }
 
     fetchResultsFromApi = (query) => {
-        const Url = `http://localhost:8080/directory/insurances/${query}`;
+        const Url = `https://med-directory-cen.herokuapp.com/directory/insurances/${query}`;
 
         if (this.cancel) {
             this.cancel.cancel(); //before making a request we first check if the token was already availble then we cancel that previous request before createing a new one  
